@@ -1,10 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import {render} from 'react-dom';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
+
+import './views/assets/css/bootstrap.min.css';
+import './views/assets/css/index.css';
+import './views/assets/css/ionicons.min.css';
+import './views/assets/css/font-awesome.min.css';
+
+
+render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
