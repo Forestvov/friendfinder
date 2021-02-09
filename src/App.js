@@ -1,21 +1,27 @@
 import './App.css';
 import Header from "./views/components/Header/Header";
 import Footer from "./views/components/Footer/Footer";
+import Profile from "./views/components/Profile/Profile";
+import {BrowserRouter} from "react-router-dom";
 
-function App() {
+const App = () =>  {
     return (
         <div className="App">
-
             <Header/>
-
             <div className="container">
-
+                <Profile/>
             </div>
-
             <Footer/>
-
         </div>
     );
 }
 
-export default App;
+const friendfinderAppp = () => {
+    return(
+        <BrowserRouter>
+            <App/>
+        </BrowserRouter>
+    )
+}
+
+export default friendfinderAppp;
