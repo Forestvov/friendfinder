@@ -2,15 +2,19 @@ import React from 'react'
 
 import Friend from "./Friend/Friend";
 
-const Friends = () => {
+const Friends = ({users}) => {
     return (
         <div>
             <div className="friend-list">
                 <div className="row">
-                    <Friend/>
-                    <Friend/>
-                    <Friend/>
-                    <Friend/>
+                    {users
+                        .filter((u) => u.isFriend)
+                        .map( (u) => <Friend
+                        userFirstName={u.userFirstName}
+                        userLastName={u.userLastName}
+                        userAvatar={u.userAvatar}
+                        userSpecialization={u.userSpecialization}
+                        key={u.userID}/>)}
                 </div>
             </div>
         </div>

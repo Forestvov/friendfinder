@@ -11,10 +11,7 @@ import './views/assets/css/ionicons.min.css';
 import './views/assets/css/font-awesome.min.css';
 
 
-render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+render(<App />,
   document.getElementById('root')
 );
 

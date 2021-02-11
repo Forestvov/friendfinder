@@ -1,8 +1,8 @@
 import React from 'react'
 
-const PostImage = () => {
+const PostImage = ({postImage}) => {
     return (
-        <img src="http://placehold.it/1920x1280" alt="post-image"
+        <img src={postImage} alt="post-image"
              className="img-responsive post-image"/>
     )
 }

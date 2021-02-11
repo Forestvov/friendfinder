@@ -1,8 +1,8 @@
 import React from 'react'
 
-const UserAvatar = ({styleClass}) => {
+const UserAvatar = ({userAvatarUrl, styleClass}) => {
     return (
-        <img src="http://placehold.it/300x300" alt="user"
+        <img src={userAvatarUrl} alt="user"
              className={styleClass}/>
     )
 }

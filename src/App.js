@@ -1,8 +1,14 @@
+import {BrowserRouter} from "react-router-dom";
+import store from "./redux";
+import {Provider} from "react-redux"
+
 import './App.css';
+
 import Header from "./views/components/Header/Header";
 import Footer from "./views/components/Footer/Footer";
 import Profile from "./views/components/Profile/Profile";
-import {BrowserRouter} from "react-router-dom";
+
+
 
 const App = () =>  {
     return (
@@ -19,7 +25,9 @@ const App = () =>  {
 const friendfinderAppp = () => {
     return(
         <BrowserRouter>
+            <Provider store={store}>
             <App/>
+            </Provider>
         </BrowserRouter>
     )
 }

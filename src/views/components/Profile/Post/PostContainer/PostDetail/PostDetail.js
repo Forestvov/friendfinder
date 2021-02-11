@@ -6,19 +6,22 @@ import PostText from "../PostText/PostText";
 import PostComment from "../../PostCreate/PostComment";
 import PostCreateComment from "../PostCreateComment/PostCreateComment";
 
-const PostDetail = () => {
+const PostDetail = ({postID,postText, postLike, postDisLike,setLike, postComments, ...props}) => {
     return (
         <div className="post-detail">
 
             <PostAuthorInfo/>
 
-            <Appraisal/>
+            <Appraisal liked={props.liked} postID={postID} setLike={setLike} postLike={postLike}
+                       setDislike={props.setDislike} postDisLike={postDisLike} disliked={props.disliked}/>
 
-            <PostText/>
+            <PostText postText={postText}/>
 
-            <PostComment/>
-            <PostComment/>
-            <PostComment/>
+            {postComments.map((p) =>
+                <PostComment
+                    key={p.postCommentID}
+                    postCommentText={p.postCommentText}
+                />)}
 
             <PostCreateComment/>
 
